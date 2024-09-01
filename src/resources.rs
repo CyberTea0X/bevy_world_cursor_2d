@@ -5,7 +5,7 @@ use std::ops::{Deref, DerefMut};
 /// позиция курсора
 #[derive(Resource, Debug, Default)]
 pub struct CursorWorldPos {
-    pos: Vec2,
+    pub pos: Vec2,
 }
 
 impl Deref for CursorWorldPos {

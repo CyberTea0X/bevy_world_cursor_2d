@@ -2,6 +2,10 @@
 pub mod plugin;
 pub mod resources;
 pub mod systems;
+pub mod prelude {
+    pub use crate::plugin::CursorToWorldPlugin;
+    pub use crate::resources::CursorWorldPos;
+}
 
 #[cfg(test)]
 mod tests {
