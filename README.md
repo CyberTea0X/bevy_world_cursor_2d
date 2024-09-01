@@ -1,5 +1,8 @@
 # bevy_world_cursor_2d
 
+Existing bevy plugins can get cursor position in the window, but usually we
+need cursor world position, so i created new plugin.
+
 A very simple plugin for [bevy](https://bevyengine.org/)
 All it does is provide a cursor position resource in the 2D game world,
 which is automatically updated.

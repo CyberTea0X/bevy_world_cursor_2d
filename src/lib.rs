@@ -14,7 +14,7 @@ mod tests {
 
     fn exit_system(mut app_exit_events: EventWriter<AppExit>, cursor: Res<CursorWorldPos>) {
         println!("cursor world position: {}", cursor.to_string());
-        app_exit_events.send(AppExit);
+        app_exit_events.send(AppExit::Success);
     }
 
     #[test]
