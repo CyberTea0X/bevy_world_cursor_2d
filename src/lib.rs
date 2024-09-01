@@ -12,16 +12,16 @@ mod tests {
 
     use crate::{plugin::CursorToWorldPlugin, resources::CursorWorldPos};
 
-    fn exit_system(mut app_exit_events: EventWriter<AppExit>, cursor: Res<CursorWorldPos>) {
-        println!("cursor world position: {}", cursor.to_string());
-        app_exit_events.send(AppExit::Success);
-    }
-
     #[test]
     fn it_works() {
         App::new()
             .add_plugins(CursorToWorldPlugin::<Camera2d>::default())
             .add_systems(Startup, exit_system)
             .run();
+    }
+
+    fn exit_system(mut app_exit_events: EventWriter<AppExit>, cursor: Res<CursorWorldPos>) {
+        println!("cursor world position: {}", cursor.to_string());
+        app_exit_events.send(AppExit::Success);
     }
 }
